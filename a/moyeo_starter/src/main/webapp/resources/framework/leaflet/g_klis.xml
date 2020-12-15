@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" xmlns:sld="http://www.opengis.net/sld"
+  xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <NamedLayer>
+    <Name>KLIS 주제도</Name>
+    <UserStyle>
+      <FeatureTypeStyle>
+        <FeatureTypeName>Feature</FeatureTypeName>
+		<Rule>
+	      <Name>제1종전용주거지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA111</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ffff66</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+						<Mark>
+							<WellKnownName>circle</WellKnownName>
+							<Stroke>
+								<CssParameter name="stroke">#ff0000</CssParameter>
+							</Stroke>
+						</Mark>
+						<Size>8</Size>
+					</Graphic>
+				</GraphicFill>	
+            </Fill>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>제2종전용주거지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA112</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ffff00</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>circle</WellKnownName><Stroke><CssParameter name="stroke">#ff0000</CssParameter></Stroke></Mark>
+					  <Size>8</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>제1종일반주거지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA121</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ffff66</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>제2종일반주거지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA122</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ffff00</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>제3종일반주거지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA123</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ffcc00</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>준주거지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA130</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ffff00</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic>
+					  <Mark><WellKnownName>shape://slash</WellKnownName><Stroke><CssParameter name="stroke">#ff0000</CssParameter></Stroke></Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>중심상업지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA210</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ff66cc</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>circle</WellKnownName><Stroke><CssParameter name="stroke">#ff0000</CssParameter></Stroke></Mark>
+					  <Size>8</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>일반상업지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA220</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ff66cc</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>근린상업지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA230</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ff66cc</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>shape://slash</WellKnownName><Stroke><CssParameter name="stroke">#ff0000</CssParameter></Stroke></Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>유통상업지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA240</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ff66cc</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>전용공업지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA310</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#cc66ff</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>circle</WellKnownName><Stroke><CssParameter name="stroke">#660066</CssParameter></Stroke></Mark>
+					  <Size>8</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>일반공업지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA320</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#cc66ff</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>준공업지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA330</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#cc66ff</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>shape://slash</WellKnownName><Stroke><CssParameter name="stroke">#ff0000</CssParameter></Stroke></Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>보전녹지지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA410</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ccff66</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>circle</WellKnownName><Stroke><CssParameter name="stroke">#006633</CssParameter></Stroke></Mark>
+					  <Size>8</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>자연녹지지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA430</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ccff66</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>생산녹지지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA420</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ccff66</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>shape://slash</WellKnownName><Stroke><CssParameter name="stroke">#006633</CssParameter></Stroke></Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+        <Rule>
+	      <Name>경관지구</Name>
+          <ogc:Filter>
+			<ogc:Or>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQF100</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQF110</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQF120</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQF130</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQF131</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQF132</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Or>
+		  </ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer> 
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		  <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>shape://slash</WellKnownName><Stroke><CssParameter name="stroke">#ff9900</CssParameter></Stroke></Mark>
+					  <Size>10</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>고도지구</Name>
+			<ogc:Filter>
+				<ogc:Or>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQH100</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQH110</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQH120</ogc:Literal></ogc:PropertyIsEqualTo>
+				</ogc:Or>
+			</ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <LineSymbolizer >
+            <Stroke>
+				<GraphicStroke>
+					<Graphic><!--shape://slash-->
+					  <Mark>
+						<WellKnownName>wkt://MULTILINESTRING((0.0 -0.02, 0.0 0.0))</WellKnownName>
+						<Stroke><CssParameter name="stroke">#7171ff</CssParameter><CssParameter name="stroke-width">2</CssParameter></Stroke>
+					  </Mark>
+					  <Size>12</Size>
+					</Graphic>
+					
+				</GraphicStroke>			
+            </Stroke>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </LineSymbolizer >
+		</Rule>
+		<Rule>
+	      <Name>방화지구</Name>
+			<ogc:Filter>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQI100</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <LineSymbolizer >
+            <Stroke>
+				<GraphicStroke>
+					<Graphic><!--shape://slash-->
+					  <Mark>
+						<WellKnownName>wkt://MULTILINESTRING((0.0 -0.02, 0.0 0.0))</WellKnownName>
+						<Stroke><CssParameter name="stroke">#ff0000</CssParameter><CssParameter name="stroke-width">2</CssParameter></Stroke>
+					  </Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicStroke>			
+            </Stroke>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </LineSymbolizer >
+		</Rule>
+		<Rule>
+	      <Name>방재지구</Name>
+			<ogc:Filter>
+				<ogc:Or>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQJ100</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQJ200</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQJ300</ogc:Literal></ogc:PropertyIsEqualTo>
+				</ogc:Or>
+			</ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <LineSymbolizer >
+            <Stroke>
+				<GraphicStroke>
+					<Graphic><!--shape://slash-->
+					  <Mark>
+						<WellKnownName>wkt://MULTILINESTRING((0.0 -0.02, 0.0 0.0))</WellKnownName>
+						<Stroke><CssParameter name="stroke">#006633</CssParameter><CssParameter name="stroke-width">2</CssParameter></Stroke>
+					  </Mark>
+					  <Size>12</Size>
+					</Graphic>
+					
+				</GraphicStroke>			
+            </Stroke>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </LineSymbolizer >
+		</Rule>
+		<Rule>
+	      <Name>보호지구</Name>
+          <ogc:Filter>
+			<ogc:Or>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQK100</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQK110</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQK120</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQK121</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQK122</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQK123</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQK130</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Or>
+		  </ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer> 
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		  <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>shape://vertline</WellKnownName><Stroke><CssParameter name="stroke">#69bc0c</CssParameter></Stroke></Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>개발진흥지구</Name>
+          <ogc:Filter>
+			<ogc:Or>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN100</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN110</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN120</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN130</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN140</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN150</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN160</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN170</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN999</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQN000</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Or>
+		  </ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer> 
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		  <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>shape://vertline</WellKnownName><Stroke><CssParameter name="stroke">#FF0000</CssParameter></Stroke></Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>취락지구</Name>
+          <ogc:Filter>
+			<ogc:Or>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQM100</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQM110</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQM120</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Or>
+		  </ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer> 
+            <Stroke><CssParameter name="stroke">#ff0000</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>특정용도제한지구</Name>
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQO100</ogc:Literal></ogc:PropertyIsEqualTo>
+		  </ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer> 
+            <Stroke><CssParameter name="stroke">#000000</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>복합용도지구</Name>
+          <ogc:Filter>
+			<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQP501</ogc:Literal></ogc:PropertyIsEqualTo>
+		  </ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer> 
+            <Stroke><CssParameter name="stroke">#000000</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+        <Rule>
+	      <Name>도시지역</Name>
+          <ogc:Filter>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA001</ogc:Literal></ogc:PropertyIsEqualTo>
+				<!--
+			<ogc:Or>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA001</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UAQ500</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA01X</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA999</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA000</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQA500</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Or>
+				-->
+		  </ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#fd4758</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>계획관리지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQB100</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <!--<Fill><CssParameter name="fill">#ffff00</CssParameter><CssParameter name="fill-opacity">0.0</CssParameter></Fill>-->
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>shape://slash</WellKnownName><Stroke><CssParameter name="stroke">#ff0000</CssParameter></Stroke></Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>생산관리지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQB200</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ccff66</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		  <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>shape://slash</WellKnownName><Stroke><CssParameter name="stroke">#ff0000</CssParameter></Stroke></Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>보전관리지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQB300</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ccff66</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>관리지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQB001</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>농림지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQC001</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ccff66</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic>
+					  <Mark><WellKnownName>shape://slash</WellKnownName><Stroke><CssParameter name="stroke">#006633</CssParameter></Stroke></Mark>
+					  <Size>14</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>자연환경보전지역</Name>
+          <ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQD001</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Fill><CssParameter name="fill">#ccffff</CssParameter><CssParameter name="fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark><WellKnownName>circle</WellKnownName><Stroke><CssParameter name="stroke">#006633</CssParameter></Stroke></Mark>
+					  <Size>8</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+			<VendorOption name="graphic-margin">5</VendorOption>
+          </PolygonSymbolizer>
+		</Rule>
+        <Rule>
+	      <Name>개발제한구역</Name>
+          <ogc:Filter>
+			<ogc:Or>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UDV100</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UDV999</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UDU001</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Or>
+		  </ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer> 
+			<Fill><CssParameter name="Fill">#66ffff</CssParameter><CssParameter name="Fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>시가화조정구역</Name>
+			<ogc:Filter>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQQ200</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark>
+						<WellKnownName>shape://vertline</WellKnownName>
+						<Stroke><CssParameter name="stroke">#0000ff</CssParameter><CssParameter name="stroke-width">1</CssParameter></Stroke>
+					  </Mark>
+					  <Size>12</Size>
+					</Graphic>
+					
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>수산자원보호구역</Name>
+			<ogc:Filter>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQQ500</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark>
+						<WellKnownName>shape://vertline</WellKnownName>
+						<Stroke><CssParameter name="stroke">#0000ff</CssParameter><CssParameter name="stroke-width">1</CssParameter></Stroke>
+					  </Mark>
+					  <Size>14</Size>
+					</Graphic>
+					
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>도시자연공원구역</Name>
+			<ogc:Filter>
+				<ogc:Or>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQQ810</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT600</ogc:Literal></ogc:PropertyIsEqualTo>
+				</ogc:Or>
+			</ogc:Filter>
+		  <MaxScaleDenominator>80000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+			<Fill><CssParameter name="Fill">#008000</CssParameter><CssParameter name="Fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark>
+						<WellKnownName>shape://slash</WellKnownName>
+						<Stroke><CssParameter name="stroke">#ff0000</CssParameter><CssParameter name="stroke-width">1</CssParameter></Stroke>
+					  </Mark>
+					  <Size>12</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>입지규제최소구역</Name>
+			<ogc:Filter>
+				<ogc:Or>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQQ901</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>TMP070</ogc:Literal></ogc:PropertyIsEqualTo>
+				</ogc:Or>
+			</ogc:Filter>
+			<MaxScaleDenominator>80000</MaxScaleDenominator>
+			<PolygonSymbolizer>
+				<!--<Stroke>
+					<GraphicStroke>
+						<Graphic>
+						  <Mark>
+							<WellKnownName>
+							wkt://LINESTRING(0.0 0.1, 10.0 0.1)
+							</WellKnownName>
+							<Stroke><CssParameter name="stroke">#ff0000</CssParameter><CssParameter name="stroke-width">1</CssParameter></Stroke>
+						  </Mark>
+						  <Size>6</Size>
+						</Graphic>
+					</GraphicStroke>
+					<VendorOption name="graphic-margin">5</VendorOption>
+				</Stroke>-->
+				<Stroke>
+				  <CssParameter name="stroke">#FF0000</CssParameter>
+				  <CssParameter name="stroke-width">1</CssParameter>
+				  <CssParameter name="stroke-dasharray">10 2 2 10</CssParameter>
+				  <CssParameter name="stroke-dashoffset">3</CssParameter>
+				</Stroke>
+			</PolygonSymbolizer>
+			<PolygonSymbolizer>
+				<Fill>
+					<GraphicFill>
+						<Graphic><!--shape://slash-->
+						  <Mark>
+							<WellKnownName>shape://vertline</WellKnownName>
+							<Stroke><CssParameter name="stroke">#dddddd</CssParameter><CssParameter name="stroke-width">1</CssParameter></Stroke>
+						  </Mark>
+						  <Size>12</Size>
+						</Graphic>
+					</GraphicFill>			
+				</Fill>
+			</PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>지구단위계획구역</Name>
+			<ogc:Filter>
+				<ogc:Or>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQQ300</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQQ310</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQQ320</ogc:Literal></ogc:PropertyIsEqualTo>
+				</ogc:Or>
+			</ogc:Filter>
+			<MaxScaleDenominator>80000</MaxScaleDenominator>
+			<PolygonSymbolizer>
+				<!--<Stroke>
+					<GraphicStroke>
+						<Graphic>
+						  <Mark>
+							<WellKnownName>
+							wkt://LINESTRING(0.0 0.1, 10.0 0.1)
+							</WellKnownName>
+							<Stroke><CssParameter name="stroke">#ff0000</CssParameter><CssParameter name="stroke-width">1</CssParameter></Stroke>
+						  </Mark>
+						  <Size>6</Size>
+						</Graphic>
+					</GraphicStroke>
+					<VendorOption name="graphic-margin">5</VendorOption>
+				</Stroke>-->
+				<Stroke>
+				  <CssParameter name="stroke">#FF0000</CssParameter>
+				  <CssParameter name="stroke-width">1</CssParameter>
+				  <CssParameter name="stroke-dasharray">10 2 2 10</CssParameter>
+				  <CssParameter name="stroke-dashoffset">3</CssParameter>
+				</Stroke>
+			</PolygonSymbolizer>
+		</Rule>
+        <Rule>
+	      <Name>도로</Name>
+          <ogc:Filter>
+			<ogc:Or>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS100</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS101</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS102</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS103</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS104</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS105</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS106</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS131</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS132</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS133</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS134</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS141</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS142</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS143</ogc:Literal></ogc:PropertyIsEqualTo>
+				<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQS190</ogc:Literal></ogc:PropertyIsEqualTo>
+			</ogc:Or>
+		  </ogc:Filter>
+		  <MaxScaleDenominator>180000</MaxScaleDenominator>
+		  <PolygonSymbolizer> 
+			<Fill><CssParameter name="Fill">#ffffff</CssParameter><CssParameter name="Fill-opacity">0.8</CssParameter></Fill>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+		</Rule>
+		<Rule>
+	      <Name>공원</Name>
+			<ogc:Filter>
+				<ogc:Or>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT200</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT210</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT220</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT221</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT230</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT240</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT250</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT260</ogc:Literal></ogc:PropertyIsEqualTo>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQT290</ogc:Literal></ogc:PropertyIsEqualTo>
+				</ogc:Or>
+			</ogc:Filter>
+		  <MaxScaleDenominator>180000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash-->
+					  <Mark>
+						<WellKnownName>shape://vertline</WellKnownName>
+						<Stroke><CssParameter name="stroke">#0000ff</CssParameter><CssParameter name="stroke-width">1</CssParameter></Stroke>
+					  </Mark>
+					  <Size>12</Size>
+					</Graphic>
+					
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+        <Rule>
+	      <Name>고등학교</Name>
+			<ogc:Filter>
+				<ogc:Or>
+					<ogc:PropertyIsEqualTo><ogc:PropertyName>ucode</ogc:PropertyName><ogc:Literal>UQV340</ogc:Literal></ogc:PropertyIsEqualTo>
+				</ogc:Or>
+			</ogc:Filter>
+		  <MaxScaleDenominator>180000</MaxScaleDenominator>
+		  <PolygonSymbolizer>
+            <Stroke><CssParameter name="stroke">#777777</CssParameter></Stroke>
+          </PolygonSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+				<GraphicFill>
+					<Graphic><!--shape://slash   shape://vertline-->
+					  <Mark>
+						<WellKnownName>shape://slash</WellKnownName>
+						<Stroke><CssParameter name="stroke">#0000ff</CssParameter><CssParameter name="stroke-width">1</CssParameter></Stroke>
+					  </Mark>
+					  <Size>20</Size>
+					</Graphic>
+				</GraphicFill>			
+            </Fill>
+          </PolygonSymbolizer>
+		</Rule>
+        <!-- UQS116','UQS117','UQS118','UQS121','UQS120','UQS122' -->
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

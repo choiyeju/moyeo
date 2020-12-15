@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.moyeo.call.sql.geoquery">
+	<select id="SelectLayerList" parameterType ="hashMap" resultType="hashMap">
+   	select * from t_layer_list where is_show ='1' order by orderby
+	</select>
+   	<!-- 이하 공통 공간 쿼리 -->
+   	<!-- 공간객체 면적재기 속성과정 -->
+   	<select id="CalcGeometryArea" parameterType="hashMap" resultType="hashMap">
+	   	SELECT ST_Area(ST_SetSRID(#{geomString}::geometry,5174)) as area
+   	</select>
+   	<!-- 연속지적도 PNU목록 병합 기능 쿼리 -->
+   	<select id="CalcGeometryLayerForWorkArea" parameterType="hashMap" resultType="hashMap">
+	   	SELECT ST_AsGeoJSON(${geoquery}) as jgeom from ${layer} where ${field} in (${vallist})
+   	</select>
+   	<!-- 스냅기능을 위한 맵 영역의 지오매트리 객체 쿼리 -->
+   	<select id="SelectMapBoxList" parameterType="hashMap" resultType="hashMap">
+<!--    	,ST_AsGeoJSON(ST_Transform(geom,4326)) as jgeom -->
+	   	SELECT * FROM ${table} where geom <![CDATA[&&]]> ST_Transform(ST_MakeEnvelope(#{minx}, #{miny}, #{maxx}, #{maxy}, 4326),#{srid})
+   	</select>
+   	<!-- 공간객체 공간 쿼리 -->
+   	<select id="CalcGeometry" parameterType="hashMap" resultType="hashMap">
+	   	SELECT ST_AsGeoJSON(${geoquery}) as jgeom
+   	</select>
+   	<!-- 공간객체 공간 쿼리 속성과정 -->
+   	<select id="CalcGeometryForLayer" parameterType="hashMap" resultType="hashMap">
+	   	SELECT ST_AsGeoJSON(${geoquery}) as jgeom from ${layer} where ${field}=#{value}
+   	</select>
+   	<!-- 공간객체 공간 무결성체크 속성과정 -->
+   	<select id="CalcGeometryIsValid" parameterType="hashMap" resultType="hashMap">
+	   	SELECT ST_isValid(#{geometry}::geometry) as isValid
+   	</select>
+   	<!-- 공간객체 공간 무결성체크 속성과정 -->
+   	<select id="CalcGeometryMakeValid" parameterType="hashMap" resultType="hashMap">
+	   	SELECT ST_multi(st_collectionextract(ST_MakeValid(#{geometry}::geometry),3)) as geom
+   	</select>
+</mapper>

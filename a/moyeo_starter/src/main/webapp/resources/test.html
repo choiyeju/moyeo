@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST 페이지</title>
+</head>
+<body>
+<script type="text/javascript" src="./framework/jquery/jquery-3.2.1.min.js"></script>
+<div>
+	<input type="text" id="url" style="width:100%;" value="http://localhost:8080/cmserver214/starter/ows?service=WPS"/>
+	<textarea id="cmd" style="width:100%;height:600px;"></textarea>
+	<input type="button" value="send" onclick="send();"/>
+</div>
+<script>
+$(document).ready(function () {
+	$("#cmd").val('<?xml version="1.0" encoding="utf-8"?>\n'
+			+'<wps:Execute version="1.0.0" service="WPS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n'
+			+'xmlns="http://www.opengis.net/wps/1.0.0" xmlns:wfs="http://www.opengis.net/wfs"\n'
+			+'	xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1"\n'
+			+'	xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc"\n'
+			+'	xmlns:wcs="http://www.opengis.net/wcs/1.1.1" xmlns:xlink="http://www.w3.org/1999/xlink"\n'
+			+'	xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd">\n'
+			+'	 <ows:Identifier>statistics:ClipWithFeatures</ows:Identifier>\n'
+			+'	 <wps:DataInputs>\n'
+			+'	 <wps:Input>\n'
+			+'	 <ows:Identifier>inputFeatures</ows:Identifier>\n'
+			+'	 <wps:Reference mimeType="text/xml" xlink:href="http://geoserver/wfs" method="POST">\n'
+			+'	 <wps:Body>\n'
+			+'	 <wfs:GetFeature service=“WFS” version=“1.1.0” outputFormat=“GML3” xmlns:foss="http://www.opengeospatial.net/foss">\n'
+			+'	 <wfs:Query typeName="foss:emd" />\n'
+			+'	 </wfs:GetFeature>\n'
+			+'	 </wps:Body>\n'
+			+'	 </wps:Reference>\n'
+			+'	 </wps:Input>\n'
+			+'	 <wps:Input>\n'
+			+'	 <ows:Identifier>clipFeatures</ows:Identifier>\n'
+			+'	 <wps:Reference mimeType="text/xml" xlink:href="http://geoserver/wfs" method="POST">\n'
+			+'	 <wps:Body>\n'
+			+'	 <wfs:GetFeature service=“WFS” version=“1.1.0” outputFormat=“GML3”	xmlns:foss="http://www.opengeospatial.net/foss">\n'
+			+'	 <wfs:Query typeName="foss:overlay02" />\n'
+			+'	 </wfs:GetFeature>\n'
+			+'	 </wps:Body>\n'
+			+'	 </wps:Reference>\n'
+			+'	 </wps:Input>\n'
+			+'	 </wps:DataInputs>\n'
+			+'	 <wps:ResponseForm>\n'
+			+'	 <wps:RawDataOutput mimeType=“text/xml; subtype=wfs-collection/1.1”>\n'
+			+'	 <ows:Identifier>result</ows:Identifier>\n'
+			+'	 </wps:RawDataOutput>\n'
+			+'	 </wps:ResponseForm>\n'
+			+'	</wps:Execute>');
+});
+function send() {
+	$.ajax({
+        url:$("#url").val(),
+        type:'POST',
+        data: $("#cmd").val(),
+        success:function(data){
+            alert(data);
+        },
+        error:function(jqXHR, textStatus, errorThrown){
+            alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+        }
+    });
+}
+</script>
+</body>
+</html>

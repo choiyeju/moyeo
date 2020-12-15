@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.moyeo.ctrl.mapper.SearchMapper">
+	<select id="find" parameterType="SearchVO" resultType="SearchVO">
+		<choose>
+			<when test="searchType == 'aLotNumber'">
+				select full_jibun as fmynm,
+				       x as lon,
+				       y as lat,
+				       'aLotNumber' as searchType
+				from tb_jibun 
+				where 1=1
+				and full_jibun like '%'||#{keyword}||'%'
+				order by (full_jibun like '%'||#{keyword}) desc, full_jibun asc
+				limit #{recordCountPerPage} offset #{firstIndex}
+			</when>
+			<when test="searchType == 'roadName'">
+				select full_name as fmynm,
+				       x as lon,
+				       y as lat,
+				       'roadName' as searchType	
+				from tb_rn_bldg
+				where 1=1
+				and full_name like '%'||#{keyword}||'%'
+				order by (full_name like '%'||#{keyword}) desc, full_name asc
+				limit #{recordCountPerPage} offset #{firstIndex}
+			</when>			
+		</choose>
+	</select>
+
+	<select id="findCnt" parameterType="SearchVO" resultType="java.lang.Integer">
+		<choose>
+			<when test="searchType == 'aLotNumber'">
+				select count(*)
+				from tb_jibun 
+				where 1=1
+				and full_jibun like '%'||#{keyword}||'%'
+			</when>
+		</choose>
+		<choose>
+			<when test="searchType == 'roadName'">
+				select count(*)
+				from tb_rn_bldg
+				where 1=1
+				and full_name like '%'||#{keyword}||'%'
+			</when>
+		</choose>
+	</select>	
+	
+	<select id="findPosition" parameterType="SearchVO" resultType="String">
+		select b.full_jibun as fmynm
+		from gmt_jijuk a
+		join tb_jibun b
+		on a.pnu=b.pnu
+		where st_contains(a.geom, st_transform(st_geomfromewkt('SRID=4326;POINT('||#{lon}||' '||#{lat}||')'),5179))
+		limit 1
+</select>
+</mapper>

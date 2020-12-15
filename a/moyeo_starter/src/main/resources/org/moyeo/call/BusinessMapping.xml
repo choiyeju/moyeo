@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+	<!-- files -->
+	<business id="SELECT_MAPBOX_LIST"   					>org.moyeo.call.modules.geo.SelectMapBoxList</business>
+	<business id="CALC_GEOMETRY"   							>org.moyeo.call.modules.geo.CalcGeometry</business>
+	<business id="SELECT_KEYWORD_SEARCH" 					>org.moyeo.call.modules.geo.SelectKeywordSearch</business>
+	<business id="SELECT_LAYER_LIST"                        >org.moyeo.call.modules.geo.SelectLayerList</business>
+	<business id="FILE_UPLOAD"	                   			>org.moyeo.call.modules.files.Upload</business>
+	                                                    	
+	<business id="INSERT_MEMBER"                			>org.moyeo.call.modules.init.InsertMember</business>
+	<business id="SELECT_MEMBER"              				>org.moyeo.call.modules.init.SelectMember</business>
+	<business id="LOGIN_MEMBER"              				>org.moyeo.call.modules.init.LoginMember</business>
+	<business id="SESSION_CHECK"              				>org.moyeo.call.modules.init.SessionCheck</business>
+	<business id="SESSION_DESTROY"              			>org.moyeo.call.modules.init.SessionDestroy</business>
+</mapping>

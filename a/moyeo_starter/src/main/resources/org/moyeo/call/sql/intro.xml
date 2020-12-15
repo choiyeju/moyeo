@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.moyeo.call.sql.init">
+	
+	<!-- 회원정보 입력 -->
+	<insert id="insertMember" parameterType="hashMap">
+		INSERT INTO t_user (user_id, passwd, user_nm, user_tel, last_mod_dt, create_dt, post_num, user_phone, address, email, user_job, user_jobtit, user_area)
+			VALUES (#{userId}, #{userPw}, #{userNm}, #{userTel}, current_date, #{createDate}, #{userPostNum}, #{userPhone}, #{userAdd}, #{userEmail}, #{userJob}, #{userJobtit}, #{userArea})
+
+	</insert>	
+	<!-- ID중복 조회 -->
+	<select id="selectMember" parameterType="hashMap" resultType="hashMap">
+		SELECT count(*) FROM t_user 
+			WHERE user_id = #{userId}
+	</select>
+	<!-- 로그인 -->
+	<select id="loginMember" parameterType="hashMap" resultType="hashMap">
+		SELECT * FROM t_user 
+			WHERE user_id = #{userId}
+			AND passwd = #{userPw}
+	</select>
+	<!-- 세션체크 -->
+	<select id="sessionCheck" parameterType="hashMap" resultType="hashMap">
+		SELECT * FROM t_user 
+			WHERE user_id = #{userId}
+	</select>
+
+</mapper>

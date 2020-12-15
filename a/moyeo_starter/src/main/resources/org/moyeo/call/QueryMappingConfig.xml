@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="org/moyeo/call/db2.properties" />
+	
+<!-- 	<settings> -->
+<!-- 		<setting name="callSettersOnNulls" value="true"/> -->
+<!-- 		<setting name="jdbcTypeForNull" value="OTHER"/> -->
+<!-- 	</settings> -->
+	
+	<typeAliases>
+		<typeAlias alias="jsonObject" type="org.json.JSONObject" />
+		<typeAlias alias="hashMap" type="java.util.HashMap" />
+		<typeAlias alias="map" type="java.util.Map" />
+		<typeAlias alias="list" type="java.util.List" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+		
+	<mappers>
+<!-- 		<mapper resource="ttt/ImageMapper.xml" /> -->
+		<mapper resource="org/moyeo/call/sql/sample.xml" />
+		<mapper resource="org/moyeo/call/sql/geoquery.xml" />
+		<mapper resource="org/moyeo/call/sql/intro.xml" />
+	</mappers>
+	
+
+	
+</configuration>

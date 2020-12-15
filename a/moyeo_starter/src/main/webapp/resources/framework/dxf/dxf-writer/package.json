@@ -1,0 +1,59 @@
+{
+  "_from": "dxf-writer",
+  "_id": "dxf-writer@1.6.0",
+  "_inBundle": false,
+  "_integrity": "sha512-+Xo8j8BitcUHT+RFRVg0uLcieAl6eLRcm1sa8GK8/gYtaYz48l8l0AW8xYfVzRaH/FHZpvPsr40WoLypDqpKug==",
+  "_location": "/dxf-writer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "dxf-writer",
+    "name": "dxf-writer",
+    "escapedName": "dxf-writer",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/dxf-writer/-/dxf-writer-1.6.0.tgz",
+  "_shasum": "22510fcf1ccc14486578f040aa9362b252cf2040",
+  "_spec": "dxf-writer",
+  "_where": "E:\\ddd",
+  "author": {
+    "name": "Ognjen Petrovic"
+  },
+  "bugs": {
+    "url": "https://github.com/ognjen-petrovic/js-dxf/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Dead simple 2D DXF writer",
+  "devDependencies": {
+    "browserify": "^16.2.3"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "homepage": "https://github.com/ognjen-petrovic/js-dxf#readme",
+  "keywords": [
+    "DXF",
+    "CAD",
+    "AutoCAD"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "dxf-writer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ognjen-petrovic/js-dxf.git"
+  },
+  "scripts": {
+    "bundle": "browserify -r ./src/Drawing.js:Drawing > ./examples/browser/dxf_bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.6.0"
+}

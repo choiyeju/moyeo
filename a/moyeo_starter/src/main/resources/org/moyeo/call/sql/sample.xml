@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.moyeo.call.sql">
+   	<select id="selectSample" parameterType="hashMap" resultType="hashMap">
+		select id,title,status,update_date from testdb
+		where 1=1
+		<choose>
+			<when test="title != null">
+			 and title REGEXP #{title}
+			</when>
+		</choose>
+        limit #{offset}, 20
+   	</select>
+   	<select id="selectSampleCnt" parameterType="hashMap" resultType="hashMap">
+		SELECT count(*) CNT FROM (
+		select id,title,status,update_date from testdb
+		where 1=1
+		<choose>
+			<when test="title != null">
+			 and title REGEXP #{title}
+			</when>
+		</choose>
+        ) AAA
+   	</select>
+    <insert id="insertSample" parameterType="hashMap">
+  		insert into testdb (id,title,status,update_date)
+  		values (
+  			#{id},
+  			#{title},
+  			#{status},
+  			#{update_date}
+  		)
+  	</insert>
+  	<update id="updateSample" parameterType="hashMap">
+  		update testdb set status = #{status},update_date = now()
+		<choose>
+			<when test="status != null">
+	  		,status=#{status} 
+			</when>
+		</choose>
+		where id = #{id}
+  	</update>
+  	<delete id="deleteSample" parameterType="hashMap">
+  		delete from testdb where id=#{id}
+  	</delete>
+</mapper>
